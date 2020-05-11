@@ -6,7 +6,7 @@
 1. Flutter
 2. Android Studio
 #### Snapshot of the project
-![Snapshot](https://github.com/ManishShah120/Flutter_Dev-Card/blob/master/Snapshot.jpeg)
+![Snapshot](https://github.com/ManishShah120/Flutter_Dev-Card/blob/master/snapshot.jpg)
 
 ### version: 1.0.0+1
 - environment:
