@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.orange[200],
+        backgroundColor: Colors.grey[900],
         body: SafeArea(
           child: Column(
             //To align everything which is inside the container
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
             children: <Widget>[
               CircleAvatar(
                 radius: 60,
-                backgroundColor: Colors.redAccent,
+                backgroundColor: Colors.white,
                 backgroundImage: AssetImage('images/myself.jpg'),
               ), //image
               Text('Manish Kumar Shah',
@@ -35,20 +35,20 @@ class MyApp extends StatelessWidget {
                 style: TextStyle(
                   fontFamily: 'Pacifico',
                   fontSize: 12.0,
-                  color: Colors.indigo[900],
+                  color: Colors.green[900],
                   letterSpacing: 1.8,
                   fontWeight: FontWeight.bold,
                 ),
               ), //Flutter developer
               SizedBox(
-                height: 25.0,
-                width: 200.0,
+                height: 20.0,
+                width: 250.0,
                 child: Divider(
-                  color: Colors.lightBlueAccent,
+                  color: Colors.white,
                 ),
               ), //Height
               Card(
-                color: Colors.white,
+                color: Colors.blueGrey[500],
                 //To resize this container
                 margin: EdgeInsets.symmetric(
                   vertical: 1.0,
@@ -63,13 +63,13 @@ class MyApp extends StatelessWidget {
                     child: ListTile(
                       leading: Icon(
                         Icons.phone,
-                        color: Colors.teal[500],
+                        color: Colors.tealAccent,
                         size: 30.0,
                       ),
                       title: Text(
                         '+91 9876543211',
                         style: TextStyle(
-                          color: Colors.black,
+                          color: Colors.white,
                           fontFamily: 'Lobster',
                           fontWeight: FontWeight.bold,
                           fontSize: 18.0,
@@ -78,7 +78,7 @@ class MyApp extends StatelessWidget {
                     )),
               ), //Phone Number
               Card(
-                color: Colors.white,
+                color: Colors.blueGrey[500],
                 //To resize this container and give spaces for all the container
                 margin: EdgeInsets.symmetric(
                   vertical: 10.0,
@@ -91,13 +91,13 @@ class MyApp extends StatelessWidget {
                     child: ListTile(
                       leading: Icon(
                         Icons.email,
-                        color: Colors.teal[500],
+                        color: Colors.tealAccent,
                         size: 30.0,
                       ),
                       title: Text(
                         'mkshah141@gmail.com',
                         style: TextStyle(
-                          color: Colors.black,
+                          color: Colors.white,
                           fontFamily: 'Source Sans Pro',
                           fontWeight: FontWeight.bold,
                           fontSize: 18.0,
