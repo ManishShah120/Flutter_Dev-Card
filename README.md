@@ -15,7 +15,7 @@
 ## Dependencies & packages
 - flutter:
 - cupertino_icons: ^0.1.2
-- url_launcher: ^5.4.2
+- url_launcher: ^5.4.7
 
 ## Dev Dependencies
 - dev_dependencies:
