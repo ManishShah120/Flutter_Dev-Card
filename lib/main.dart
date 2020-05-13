@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.grey[900],
+        backgroundColor: Colors.grey[500],
         body: SafeArea(
           child: Column(
             //To align everything which is inside the container
@@ -33,9 +33,9 @@ class MyApp extends StatelessWidget {
               Text(
                 'FLUTTER DEVELOPER',
                 style: TextStyle(
-                  fontFamily: 'Pacifico',
+                  fontFamily: 'Source Sans Pro',
                   fontSize: 12.0,
-                  color: Colors.green[900],
+                  color: Colors.lightBlue[100],
                   letterSpacing: 1.8,
                   fontWeight: FontWeight.bold,
                 ),
@@ -48,7 +48,7 @@ class MyApp extends StatelessWidget {
                 ),
               ), //Height
               Card(
-                color: Colors.blueGrey[500],
+                color: Colors.blueGrey[200],
                 //To resize this container
                 margin: EdgeInsets.symmetric(
                   vertical: 1.0,
@@ -56,29 +56,36 @@ class MyApp extends StatelessWidget {
                 ),
                 //There's no padding property in "Card" but if you are using "Container" then you can use
                 //padding: EdgeInsets.all(10.0),
-                child: Padding(
-                    padding: EdgeInsets.all(
-                      7.0,
-                    ),
-                    child: ListTile(
-                      leading: Icon(
-                        Icons.phone,
-                        color: Colors.tealAccent,
-                        size: 30.0,
+
+                child: InkWell(
+                  splashColor: Colors.blue.withAlpha(30),
+                  onTap: () {
+                    launch("tel://+91 8638648586");
+                  },
+                  child: Padding(
+                      padding: EdgeInsets.all(
+                        7.0,
                       ),
-                      title: Text(
-                        '+91 9876543211',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontFamily: 'Lobster',
-                          fontWeight: FontWeight.bold,
-                          fontSize: 18.0,
+                      child: ListTile(
+                        leading: Icon(
+                          Icons.phone,
+                          color: Colors.black,
+                          size: 30.0,
                         ),
-                      ),
-                    )),
+                        title: Text(
+                          '+91 9876543211',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontFamily: 'Lobster',
+                            fontWeight: FontWeight.bold,
+                            fontSize: 18.0,
+                          ),
+                        ),
+                      )),
+                ),
               ), //Phone Number
               Card(
-                color: Colors.blueGrey[500],
+                color: Colors.blueGrey[200],
                 //To resize this container and give spaces for all the container
                 margin: EdgeInsets.symmetric(
                   vertical: 10.0,
@@ -86,24 +93,31 @@ class MyApp extends StatelessWidget {
                 ),
                 //There's no padding property in "Card" but if you are using "Container" then you can use
                 //padding: EdgeInsets.all(10.0),
-                child: Padding(
-                    padding: const EdgeInsets.all(7.0),
-                    child: ListTile(
-                      leading: Icon(
-                        Icons.email,
-                        color: Colors.tealAccent,
-                        size: 30.0,
-                      ),
-                      title: Text(
-                        'mkshah141@gmail.com',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontFamily: 'Source Sans Pro',
-                          fontWeight: FontWeight.bold,
-                          fontSize: 18.0,
+                child: InkWell(
+                  splashColor: Colors.blue.withAlpha(30),
+                  onTap: () {
+                    launch(
+                        'mailto:smith@example.org?subject=Great Work&body=I visited your App!');
+                  },
+                  child: Padding(
+                      padding: const EdgeInsets.all(7.0),
+                      child: ListTile(
+                        leading: Icon(
+                          Icons.email,
+                          color: Colors.black,
+                          size: 30.0,
                         ),
-                      ),
-                    )),
+                        title: Text(
+                          'mkshah141@gmail.com',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontFamily: 'Source Sans Pro',
+                            fontWeight: FontWeight.bold,
+                            fontSize: 18.0,
+                          ),
+                        ),
+                      )),
+                ),
               ), //Email
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
