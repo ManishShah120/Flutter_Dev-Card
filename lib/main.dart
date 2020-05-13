@@ -256,15 +256,17 @@ _launchFacebookURL() async {
 }
 
 _launchWhatsAppURL() async {
-  const url = 'https://www.facebook.com/ManishShah120';
-  if (await canLaunch(url)) {
+  String phoneNumber = '+91863848586';
+  String message = 'Hello from Flutter';
+  var whatsappUrl = "whatsapp://send?phone=$phoneNumber&text=$message";
+  if (await canLaunch(whatsappUrl)) {
     await launch(
-      url,
-      forceSafariVC: true,
-      forceWebView: true,
-      enableJavaScript: true,
+      whatsappUrl,
+//      forceSafariVC: true,
+//      forceWebView: true,
+//      enableJavaScript: true,
     );
   } else {
-    throw 'Could not launch $url';
+    throw 'Could not launch $whatsappUrl';
   }
 }
