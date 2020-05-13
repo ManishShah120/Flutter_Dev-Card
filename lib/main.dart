@@ -60,7 +60,7 @@ class MyApp extends StatelessWidget {
                 child: InkWell(
                   splashColor: Colors.blue.withAlpha(30),
                   onTap: () {
-                    launch("tel://+91 8638648586");
+                    launch("tel://+91 9876543210");
                   },
                   child: Padding(
                       padding: EdgeInsets.all(
@@ -97,7 +97,7 @@ class MyApp extends StatelessWidget {
                   splashColor: Colors.blue.withAlpha(30),
                   onTap: () {
                     launch(
-                        'mailto:smith@example.org?subject=Great Work&body=I visited your App!');
+                        'mailto:mkshah141@gmail.com?subject=Great Work&body=I visited your App!');
                   },
                   child: Padding(
                       padding: const EdgeInsets.all(7.0),
@@ -190,8 +190,8 @@ _launchLinkedInURL() async {
   if (await canLaunch(url)) {
     await launch(
       url,
-      forceSafariVC: true,
-      forceWebView: true,
+      forceSafariVC: false,
+      forceWebView: false,
       enableJavaScript: true,
     );
   } else {
@@ -204,8 +204,8 @@ _launchGitHubURL() async {
   if (await canLaunch(url)) {
     await launch(
       url,
-      forceSafariVC: true,
-      forceWebView: true,
+      forceSafariVC: false,
+      forceWebView: false,
       enableJavaScript: true,
     );
   } else {
@@ -218,8 +218,8 @@ _launchWebsiteURL() async {
   if (await canLaunch(url)) {
     await launch(
       url,
-      forceSafariVC: true,
-      forceWebView: true,
+      forceSafariVC: false,
+      forceWebView: false,
       enableJavaScript: true,
     );
   } else {
@@ -232,8 +232,8 @@ _launchTwitterURL() async {
   if (await canLaunch(url)) {
     await launch(
       url,
-      forceSafariVC: true,
-      forceWebView: true,
+      forceSafariVC: false,
+      forceWebView: false,
       enableJavaScript: true,
     );
   } else {
@@ -246,8 +246,8 @@ _launchFacebookURL() async {
   if (await canLaunch(url)) {
     await launch(
       url,
-      forceSafariVC: true,
-      forceWebView: true,
+      forceSafariVC: false,
+      forceWebView: false,
       enableJavaScript: true,
     );
   } else {
@@ -256,7 +256,7 @@ _launchFacebookURL() async {
 }
 
 _launchWhatsAppURL() async {
-  String phoneNumber = '+91863848586';
+  String phoneNumber = '+91 XXXXX XXXXX';
   String message = 'Hello from Flutter';
   var whatsappUrl = "whatsapp://send?phone=$phoneNumber&text=$message";
   if (await canLaunch(whatsappUrl)) {
@@ -264,7 +264,7 @@ _launchWhatsAppURL() async {
       whatsappUrl,
 //      forceSafariVC: true,
 //      forceWebView: true,
-//      enableJavaScript: true,
+      enableJavaScript: true,
     );
   } else {
     throw 'Could not launch $whatsappUrl';
